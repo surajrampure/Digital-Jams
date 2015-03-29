@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="style.css"/>
+
+		<title>Digital Jams</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+		<script src="/socket.io/socket.io.js"></script>
+
+		<script type="text/javascript" src="script.js" ></script>
+
+		<script>
+			var socket = io();
+			$("form").submit(function(){
+				socket.emit("mousedown", $("#m").val());
+				$("#m").val("");
+				return false;
+			});
+
+		</script>
+
+	</head>
+	<body>
+
+		<div id = "titleText" align = "center"> <h1> Digital Jams </h1> </div>
+
+		<div id="p-wrapper">
+			<ul id="piano">
+				<li><div class="anchor C2"></div><span class="C_2"></span></li>
+				<li><div class="anchor D2"></div><span class="D_2"></span></li>
+				<li><div class="anchor E2"></div></li>
+				<li><div class="anchor F2"></div><span class="F_2"></span></li>
+				<li><div class="anchor G2"></div><span class="G_2"></span></li>
+				<li><div class="anchor A3"></div><span class="A_3"></span></li>
+				<li><div class="anchor B3"></div></li>
+				<li><div class="anchor C3"></div><span class="C_3"></span></li>
+				<li><div class="anchor D3"></div><span class="D_3"></span></li>
+				<li><div class="anchor E3"></div></li>
+				<li><div class="anchor F3"></div><span class="F_3"></span></li>
+				<li><div class="anchor G3"></div><span class="G_3"></span></li>
+				<li><div class="anchor A4"></div><span class="A_4"></span></li>
+				<li><div class="anchor B4"></div></li>
+				<li><div class="anchor C4"></div><span class="C_4"></span></li>
+				<li><div class="anchor D4"></div><span class="D_4"></span></li>
+				<li><div class="anchor E4"></div></li>
+				<li><div class="anchor F4"></div><span class="F_4"></span></li>
+				<li><div class="anchor G4"></div><span class="G_4"></span></li>
+				<li><div class="anchor A5"></div><span class="A_5"></span></li>
+				<li><div class="anchor B5"></div></li>
+				<li><div class="anchor C5"></div></li>
+			</ul>
+		</div>
+
+		<div id = "d-wrapper">
+			<div id = "set1" style = "display:flex;">
+				<div class = "normalDrum BassKick"> </div>
+				<div class = "normalDrum Clap"> </div>
+				<div class = "normalDrum Crash"> </div>
+			</div>
+
+			<div id = "set2" style = "display:flex;">
+				<div class = "normalDrum Cymbal"> </div>
+				<div class = "normalDrum HiHat"> </div>
+				<div class = "normalDrum Kick"> </div>
+			</div>
+
+		</div>
+
+		<div id = "c-wrapper">
+
+			<div style = "display:flex;">
+				<div class = "cowbellButton Cow1"> </div>
+				<div class = "cowbellButton Cow2"> </div>
+			</div>
+
+		</div>
+
+		<div id = "a-wrapper">
+
+			<div class = "animalButton Honk"> </div>
+			<div class = "animalButton Moo"> </div>
+			<div class = "animalButton Meow"> </div>
+			<div class = "animalButton Woof"> </div>
+			<div class = "animalButton Crow"> </div>
+
+		</div>
+
+	</body>
+</html>
+
+
+
+
