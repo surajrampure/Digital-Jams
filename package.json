@@ -1,7 +1,7 @@
 {
 	"name": "Digital-Jams",
 	"version": "0.0.1",
-	"description": "A web app that allows global music playing.",
+	"description": "A web app for global music playing.",
 	"author": "Suraj Rampure",
 	"license": "MIT",
 	"dependencies": {
